@@ -19,7 +19,9 @@
 // }
 
 
-function takeGuess() {
+
+
+function takeMaximum() {
     
 var maximum = 0
 
@@ -49,28 +51,47 @@ else if(       (isNaN(clientInput)) === true   ) {
      alert( 'That is not a number !')
      
 }
+}
 
-
-
+console.log('client input: ' + clientInput)
+console.log('maximum: ' + maximum)
 
 
 let randomNum = Math.floor(Math.random() * maximum);
-console.log('here is your ' + randomNum);
+console.log('random Number picked by program: ' + randomNum);
 
 
 
-function validateGuess() {
+// Set maximum in range to not be exceeded
+
+
+
+
+
+
+
+
+
+// function validateGuess() {
+
      
-}
+//               let guess = Number(document.getElementById("guess").value);
+          
+//               let message = document.getElementById("message");
+          
+//               if(guess == randomNum) {
+//                   message.innerHTML = "You got it!";
+//               }
+//               else if (guess > randomNum) {
+//                   message.innerHTML = "No, try a lower number.";
+//               }
+//               else {
+//                   message.innerHTML = "No, try a higher number.";
+//               }
+//           }
+     
 
 
 
 
-}
- 
-console.log(maximum)
-console.log(clientInput)
-
-
-    
 }
