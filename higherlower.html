@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
 
     <title>Higher - Lower</title>
   </head>
@@ -12,7 +12,7 @@
     
 
 
-    <section>
+    <section class="section">
       <h1>Let's Play A Game</h1>
       <h1>Pick a Number as your maximum</h1>
       <small>Negative values, 0, and non-numbers are not available</small>
@@ -21,9 +21,11 @@
       
       <form>
         
-        <button type="button" class="btn btn-primary" onclick="takeMaximum()">Pick Maximum Number</button>
     </form>
     </section>
+    <p id="input"></p>
+    <p id="message"></p>
+    <br><br><br><br>
 
 
 
@@ -46,7 +48,7 @@
         <p>Guess a number between 1 and 20</p>
         <div class="row">
             <div class="col-lg-3 col-md-6">
-                <form>
+              <form onsubmit="return false;">
                     <div class="form-group">
                         <label>Your guess:</label>
                         <input type="text" id="guess" class="form-control">
@@ -55,7 +57,7 @@
                 </form>
             </div>
         </div>
-        <p id="message"></p>
+        
     </div>	
     <script src="higherlower.js"></script>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

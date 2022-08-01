@@ -21,7 +21,7 @@
 
 
 
-function takeMaximum() {
+
     
 var maximum = 0
 
@@ -53,17 +53,63 @@ else if(       (isNaN(clientInput)) === true   ) {
 }
 }
 
-console.log('client input: ' + clientInput)
+
+
+// Part 2
+
+
+console.log('client Input' + clientInput)
 console.log('maximum: ' + maximum)
 
 
-let randomNum = Math.floor(Math.random() * maximum);
-console.log('random Number picked by program: ' + randomNum);
+
 
 
 
 // Set maximum in range to not be exceeded
 
+var randomNum = Math.floor(Math.random() * maximum);
+console.log('random Number picked by program: ' + randomNum);
+
+
+
+
+
+
+// now do this function after maximum has value
+
+
+
+
+
+function do_guess() {
+    let guess = Number(document.getElementById("guess").value);
+    eachGuess = []
+    tries = 0
+
+    if(guess == randomNum) {
+     alert("You got it! It took you " + tries + 'tries and your guesses were ' + eachGuess)
+ }
+   
+
+   
+    
+     if (guess > maximum || guess < 0) {
+     alert("That number is not in range, try again.")
+ }
+    else if ((isNaN(guess)) === true) {
+     alert("That is not a number!")
+ }
+ else if (guess > randomNum) {
+     alert("No, try a lower number.")
+ }
+ 
+    else {
+        alert("No, try a higher number.")
+    }
+
+
+    
 
 
 
@@ -72,24 +118,11 @@ console.log('random Number picked by program: ' + randomNum);
 
 
 
-// function validateGuess() {
 
-     
-//               let guess = Number(document.getElementById("guess").value);
-          
-//               let message = document.getElementById("message");
-          
-//               if(guess == randomNum) {
-//                   message.innerHTML = "You got it!";
-//               }
-//               else if (guess > randomNum) {
-//                   message.innerHTML = "No, try a lower number.";
-//               }
-//               else {
-//                   message.innerHTML = "No, try a higher number.";
-//               }
-//           }
-     
+
+
+
+
 
 
 
