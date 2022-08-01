@@ -79,17 +79,16 @@ console.log('random Number picked by program: ' + randomNum);
 // now do this function after maximum has value
 
 
+let eachGuess = []
 
 
 
 function do_guess() {
     let guess = Number(document.getElementById("guess").value);
-    eachGuess = []
-    tries = 0
+   
+   
 
-    if(guess == randomNum) {
-     alert("You got it! It took you " + tries + 'tries and your guesses were ' + eachGuess)
- }
+   
    
 
    
@@ -102,12 +101,20 @@ function do_guess() {
  }
  else if (guess > randomNum) {
      alert("No, try a lower number.")
+     eachGuess.push(guess)
+     
+     
  }
- 
-    else {
+ else if (guess < randomNum) {
         alert("No, try a higher number.")
+        eachGuess.push(guess)
+        
+        
     }
 
+    else if(guess == randomNum) {
+     alert("You got it! It took you " + eachGuess.length + ' tries and your guesses were ' + eachGuess)
+ }
 
     
 
