@@ -58,7 +58,7 @@ else if(       (isNaN(clientInput)) === true   ) {
 // Part 2
 
 
-console.log('client Input' + clientInput)
+console.log('client Input: ' + clientInput)
 console.log('maximum: ' + maximum)
 
 
@@ -113,7 +113,7 @@ function do_guess() {
     }
 
     else if(guess == randomNum) {
-     alert("You got it! It took you " + eachGuess.length + ' tries and your guesses were ' + eachGuess)
+     alert(` "You got it! It took you ` + eachGuess.length + ' tries and your guesses were ' + eachGuess + `"`)
  }
 
     
