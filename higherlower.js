@@ -93,24 +93,30 @@ function do_guess() {
 
    
     
-     if (guess > maximum || guess < 0) {
+    if (guess > maximum || guess < 0) {
      alert("That number is not in range, try again.")
  }
     else if ((isNaN(guess)) === true) {
      alert("That is not a number!")
  }
- else if (guess > randomNum) {
+
+ else if(eachGuess.includes(guess)) {
+    alert("You already guessed that number")
+    
+}
+    else if (guess > randomNum) {
      alert("No, try a lower number.")
      eachGuess.push(guess)
      
      
  }
- else if (guess < randomNum) {
+    else if (guess < randomNum) {
         alert("No, try a higher number.")
         eachGuess.push(guess)
-        
-        
+    
     }
+
+   
 
     else if(guess == randomNum) {
      alert(` "You got it! It took you ` + eachGuess.length + ' tries and your guesses were ' + eachGuess + `"`)
