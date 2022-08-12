@@ -45,15 +45,20 @@
 
     <div class="container">
         <h1>Higher Lower</h1>
-        <p>Guess a number between 1 and 20</p>
+        <p>Guess a number between 1 and the maximum number you have chosen
+        </p>
+        <small>Click the red button below to submit a guess</small>
+        <br/>
         <div class="row">
             <div class="col-lg-3 col-md-6">
               <form onsubmit="return false;">
                     <div class="form-group">
+                      <br/>
                         <label>Your guess:</label>
                         <input type="text" id="guess" class="form-control">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="do_guess()">Guess</button>
+                    <br/>
+                    <button type="button" class="red" onclick="do_guess()">Guess</button>
                 </form>
             </div>
         </div>

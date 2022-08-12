@@ -28,7 +28,7 @@ var maximum = 0
 // While loop exists once proper value is picked, which is then assigned to maximum
 while(maximum <= 0) {
 
-// Keep looping until number is chosen
+// Keep looping until number is picked
 var clientInput = prompt('Pick a Maximum Number')
 
 if (clientInput <= -1) {
@@ -47,7 +47,7 @@ else if ((isNaN(clientInput)) === false) {
 }
 
 
-else if(       (isNaN(clientInput)) === true   ) {
+else if((isNaN(clientInput)) === true) {
      alert( 'That is not a number !')
      
 }
@@ -60,6 +60,8 @@ else if(       (isNaN(clientInput)) === true   ) {
 
 console.log('client Input: ' + clientInput)
 console.log('maximum: ' + maximum)
+document.write('Your maximum: ' + maximum)
+
 
 
 
@@ -94,24 +96,24 @@ function do_guess() {
    
     
     if (guess > maximum || guess < 0) {
-     alert("That number is not in range, try again.")
+     message.innerHTML="That number is not in range, try again.";
  }
     else if ((isNaN(guess)) === true) {
-     alert("That is not a number!")
+     message.innerHTML="That is not a number!";
  }
 
  else if(eachGuess.includes(guess)) {
-    alert("You already guessed that number")
+    message.innerHTML="You already guessed that number";
     
 }
     else if (guess > randomNum) {
-     alert("No, try a lower number.")
+     message.innerHTML="No, try a lower number.";
      eachGuess.push(guess)
      
      
  }
     else if (guess < randomNum) {
-        alert("No, try a higher number.")
+        message.innerHTML="No, try a higher number.";
         eachGuess.push(guess)
     
     }
@@ -119,7 +121,7 @@ function do_guess() {
    
 
     else if(guess == randomNum) {
-     alert(` "You got it! It took you ` + eachGuess.length + ' tries and your guesses were ' + eachGuess + `"`)
+     message.innerHTML=` "You got it! It took you ` + eachGuess.length + ' tries and your guesses were ' + eachGuess.join(`, `) + `"`;
  }
 
     
